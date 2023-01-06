@@ -117,7 +117,7 @@ const canvasRenderService = new CanvasRenderService(width, height);
          title: {
 
             display: true,
-            text: timestamp('1.671786909E12'),
+            text: 'Thanh khoản thị trường,
             fontColor: 'white',
 
 
