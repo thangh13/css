@@ -1,0 +1,395 @@
+body{
+    background-image: linear-gradient(90deg,lightseagreen 0%, #0077B6 35%, rgba(9,9,121,1) 100%);
+    height:100%;
+    overflow: hidden;
+    font-family: monospace;
+    COLOR: white;
+}
+
+.container{
+    position: absolute;
+    width:90%;
+    height:90%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-image: linear-gradient(90deg,lightseagreen 0%, #0077B6 35%, rgba(9,9,121,1) 100%);;
+    overflow: auto;
+}
+.header{
+    position: fixed;
+    top:0%;
+    width:80%;
+    z-index: 5;
+    padding:1%;
+    font-weight: bold;
+}
+.header .logo{
+    width:4%;
+    height:4%;
+    display: inline-block;
+}
+.header ul{
+    padding: 0%;
+    font-size: 100%;
+    margin: 0%;
+    list-style: BORDER;
+    display: inline-block;
+    transform: translate(0,-14px);
+}
+.header li{
+    display: inline-block;
+    font-size: 150%;
+    margin-left: 20px;
+}
+.directional{
+    position: fixed;
+    bottom:1%;
+    width:100%;
+    text-align: center;
+    z-index: 3;
+}
+.directional button{
+    width:600px;
+    height:600px;
+    color:NONE;
+    background-color: transparent;
+    border:none;
+    opacity: 0.2;
+}
+.directional button:hover{
+    opacity: 1;
+}
+#slide{
+    position: relative;
+    width:100%;
+    height:100%;
+}
+#slide .item{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+}
+#slide .item .image{
+    position: absolute;
+    top:70%;
+    left: 10%;
+    width:90%;
+    height:20%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    opacity: 0;
+    transform: scale(3);
+    transition: 1.5s;
+}
+#slide .item .image img{
+    width:65%;
+    transition: 0.5s;
+}
+#slide .item .image::before{
+    position: absolute;
+     top:70%;
+    left: 10%;
+    width:90%;
+    height:20%;
+    background-color: #000;
+    content:'111';
+    z-index: -1;
+    border-radius: 50%;
+    filter:blur(30px)
+}
+#slide .item .image img:hover{
+    transform: scale(1.4);
+}
+.content .left{
+    position: absolute;
+    left:5%;
+    top:15%;
+    width:65%;
+    height:20%;
+      font-weight: 300%;
+    display: none;
+    word-wrap: break-word;
+}
+.content .left h1{
+    top:15%;
+    width:25%;
+    height:20%;
+    font-size: 300%;
+    font-weight: 200%;
+    margin-bottom:10%;
+    word-wrap: break-word;
+    inline-size: 30%;
+    overflow-wrap: break-word;
+}
+.content .left .des{
+   top:15%;
+    width:25%;
+    height:20%;
+    font-size: 150%;
+    font-weight: 150%;
+    margin-bottom:10%;
+    opacity: 0.8;
+    margin-bottom:10%;
+    display: block;
+    word-wrap: break-word;
+     inline-size: 30%;
+    overflow-wrap: break-word;
+
+}
+.content .left button{
+    font-size: small;
+    background-color: transparent;
+    border:none;
+    color:#fff;
+}
+.content .left button i:nth-child(1){
+    margin-left: 10%;
+}
+.content .right{
+    position: absolute;
+    right:4%;
+    top:15%;
+    display: block;
+}
+.content .right h2{
+    font-size: large;
+    font-weight: 150%;
+    margin-bottom:10%;
+}
+.content .right ul{
+    padding: 0;
+    margin:0;
+    list-style: none;
+}
+.content .right li{
+    font-size: small;
+    position: relative;
+    margin-top: 20%;
+}
+.content .right li::before{
+    position: absolute;
+    left:-20%;
+    top:50%;
+    transform: translate(0,-50%);
+    width:8%;
+    height: 8%;
+    background-color: #023E8A;
+    content:'';
+    border-radius: 50%;
+    box-shadow:  0% 0% 10% #0077B6;
+}
+.tradingview-widget-container{
+     position: absolute;
+    left:120px;
+    top:60px;
+    transform: translate(0,-50%);
+    width:10px;
+    height: 10px;
+    background-color: #023E8A;
+    content:'';
+    border-radius: 50%;
+    box-shadow:  0 0 10px #0077B6;
+}
+.bi-container{
+     position: absolute;
+    left:80px;
+    top:500px;
+    transform: translate(0,-50%);
+    width:800px;
+    height: 800px;
+    background-color: #023E8A;
+    content:'';
+    border-radius: 50%;
+    box-shadow:  0 0 10px #0077B6;
+}
+.content .right li p:nth-child(1){
+    font-weight: 500;
+    padding:0;
+    margin:0;
+}
+.content .right li p:nth-child(2){
+    font-weight: 100;
+    padding:0;
+    margin:0;
+    font-size: x-small;
+}
+#slide .item:nth-child(1) .image{
+    opacity: 0;
+    transform: scale(0) translate(-100px);
+}
+#slide .item:nth-child(2) .image{
+    opacity: 1;
+    transform: scale(1);
+}
+#slide .item:nth-child(2){
+    z-index: 3;
+}
+@keyframes contentOut {
+    from{
+        opacity: 1;
+    transform: translate(0,0);
+    }to{
+        opacity: 0;
+        transform: translate(0,-100%);
+        filter:blur(113px)
+    }
+}
+@keyframes contentIn {
+    from{
+        opacity: 0;
+    transform: translate(0,100%);
+    filter:blur(33px)
+    }to{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+#slide .item:nth-child(1) .left,
+#slide .item:nth-child(1) .right,
+#slide .item:nth-child(2) .left,
+#slide .item:nth-child(2) .right{
+    display: block;
+}
+#slide .item:nth-child(1) .left,
+#slide .item:nth-child(1) .right{
+    animation:contentOut 1s ease-in-out 1 forwards
+}
+#slide .item:nth-child(2) .left,
+#slide .item:nth-child(2) .right{
+    animation:contentIn 1s ease-in-out 1 forwards
+}
+/* Nút Dropdown1*/
+ .nut_dropdown1 {
+   background-color:#0077B6;
+   color: linear-gradient(90deg,lightseagreen 0%, #0077B6 35%, rgba(9,9,121,1) 100%);
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+ .dropdown1 {
+   position: relative;
+   display: inline-block;
+ }
+/* Nội dung Dropdown */
+ .noidung_dropdown1 {
+   /*Ẩn nội dung các đường dẫn*/
+   display: none;
+   position: absolute;
+   background-color: linear-gradient(90deg,lightseagreen 0%, #0077B6 35%, rgba(9,9,121,1) 100%);
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+ .noidung_dropdown1 a {
+   color: #ffffff;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ /* thay đổi màu background khi hover vào đường dẫn */
+ .noidung_dropdown1 a:hover {background-color: #0077B6;}
+/* hiển thị nội dung dropdown khi hover */
+ .dropdown1:hover .noidung_dropdown1 {display: block;}
+/* Thay đổi màu background cho nút khi được hover */
+ .dropdown1:hover .nut_dropdown1 {background-color: #0077B6;}
+/* Nút Dropdown2*/
+ .nut_dropdown2 {
+   background-color:#0077B6;
+   color: #b72231;
+   padding: 16px;
+   font-size: 16px;
+   border: none;
+ }
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+ .dropdown2 {
+   position: relative;
+   display: inline-block;
+ }
+/* Nội dung Dropdown */
+ .noidung_dropdown2 {
+   /*Ẩn nội dung các đường dẫn*/
+   display: none;
+   position: absolute;
+   background-color:  linear-gradient(90deg,lightseagreen 0%, #0077B6 35%, rgba(9,9,121,1) 100%);
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+ .noidung_dropdown2 a {
+   color: white;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ /* thay đổi màu background khi hover vào đường dẫn */
+ .noidung_dropdown2 a:hover {background-color: #0077B6;}
+/* hiển thị nội dung dropdown khi hover */
+ .dropdown2:hover .noidung_dropdown2 {display: block;}
+/* Thay đổi màu background cho nút khi được hover */
+ .dropdown2:hover .nut_dropdown2 {background-color: #0077B6;}
+/* login button*/
+.login_but {
+position: absolute;
+    top: 10%;
+    left: 110%;
+  height: 20px;
+  width: 80px;
+  text-align: center;
+  line-height: 20px;
+  background-color: radial-gradient(red, green);
+  font-size: 17px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      background:  radial-gradient(#023E8A, #0077B6);
+  color: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* font-size: 17px; */
+  font-weight: 400;
+  transition: all 0.3s ease;
+    color : red;
+}
+.login_but\.content {
+     top: 5px;
+    right: -180px;
+  height: 40px;
+  width: 100px;
+    color: white;
+display: flex;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+
+}
+
+.login_but a:hover{
+     top: 5px;
+   font-weight: bold;
+    right: -180px;
+  height: 80px;
+  width: 300px;
+display: flex;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    color:orange;
+}
+.chart-thanhkhoan {
+    width: 500px;
+    height: 50px;
+    margin-top: 10%;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+.chart-noidung {
+    left: 1000px;
+
+}
