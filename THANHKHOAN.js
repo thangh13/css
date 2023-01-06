@@ -117,7 +117,7 @@ const canvasRenderService = new CanvasRenderService(width, height);
          title: {
 
             display: true,
-            text: 'Thanh khoản thị trường,
+            text: 'Thanh khoản thị trường',
             fontColor: 'white',
 
 
