@@ -52,7 +52,7 @@ const canvasRenderService = new CanvasRenderService(width, height);
          valuespre.push(datapre.data[i].value);
       };
       for (i = 0; i < length; i++) {
-         labelspre[i] = timestamp(labelspre[i]);
+         labelspre[i] = labelspre[i];
       };
          setInterval(response, 200);
    setInterval(datapre, 200);
